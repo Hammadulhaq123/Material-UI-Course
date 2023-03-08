@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box, Stack, Divider, Grid } from '@mui/material'
+import { Box, Stack, Divider, Grid, Paper } from '@mui/material'
 const MuiLayout = () => {
   return (
-    <>
+    // Paper component is by default a bit rounded and with some shadow and elevation. It can be used as a card and login form
+    <Paper sx={{padding: "30px",}} elevation={4}>
     {/* // spacing={1} = margin of 8px
     // Divider component is like an hr tag that you can use vertically and horizontally */}
     
@@ -49,7 +50,7 @@ const MuiLayout = () => {
       <Grid item xs={6}><Box height={40} bgcolor='primary.light'>Item</Box></Grid>
       <Grid item xs={6}><Box height={40} bgcolor='primary.light'>Item</Box></Grid>
     </Grid>
-    </>
+    </Paper>
   )
 }
 export default MuiLayout
