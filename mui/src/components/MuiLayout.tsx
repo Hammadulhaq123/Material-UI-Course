@@ -1,9 +1,10 @@
 import React from 'react'
-import { Box, Stack, Divider } from '@mui/material'
+import { Box, Stack, Divider, Grid } from '@mui/material'
 const MuiLayout = () => {
   return (
-    // spacing={1} = margin of 8px
-    // Divider component is like an hr tag that you can use vertically and horizontally
+    <>
+    {/* // spacing={1} = margin of 8px
+    // Divider component is like an hr tag that you can use vertically and horizontally */}
     
     <Stack sx={{border: '1px solid gray'}} direction='row' spacing={2} divider={<Divider orientation='vertical' flexItem sx={{backgroundColor: "success.main", width:"4px"}}/>}>
     {/* //By default a box is a div component after rendering but you can add component prop to change it to span or else */}
@@ -38,6 +39,17 @@ const MuiLayout = () => {
       Hammad ul haq
     </Box>
     </Stack>
+
+
+    {/* For more understanding about Grid columns and row check the mui website */}
+    <Grid container my={4}>
+      {/*In Grid container each row is divided into 12 column after 12 col it moves to next row and you can specify how many column you want to allocate to a item in this case we have divided all with 6 column */}
+      <Grid item xs={6}><Box height={40} bgcolor='primary.light'>Item</Box></Grid>
+      <Grid item xs={6}><Box height={40} bgcolor='primary.light'>Item</Box></Grid>
+      <Grid item xs={6}><Box height={40} bgcolor='primary.light'>Item</Box></Grid>
+      <Grid item xs={6}><Box height={40} bgcolor='primary.light'>Item</Box></Grid>
+    </Grid>
+    </>
   )
 }
 export default MuiLayout
