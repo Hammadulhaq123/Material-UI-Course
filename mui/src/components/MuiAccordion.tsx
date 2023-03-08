@@ -3,6 +3,7 @@ import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 export default function Muiaccordion() {
+  // Logic to expand one at a time. it depends on you how to use it
   const [expanded, setExpanded] = useState<string | false>(false)
   const handleChange = (isExpanded: boolean, panel: string) => {
     console.log(panel)
